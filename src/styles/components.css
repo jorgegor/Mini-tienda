@@ -1,0 +1,335 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #0b2538;
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+}
+
+.brand-block {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+    font-weight: 800;
+    box-shadow: var(--shadow);
+}
+
+.section-label,
+.product-badge,
+.price-label {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.74rem;
+    color: var(--primary-strong);
+}
+
+.brand-title,
+.panel h2,
+.panel h3 {
+    margin: 0;
+    font-family: "Palatino Linotype", Palatino, Georgia, serif;
+    letter-spacing: -0.02em;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    justify-content: center;
+}
+
+.nav-link {
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    color: var(--muted);
+    transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #e9f6ff;
+    background: rgba(37, 164, 199, 0.2);
+    transform: translateY(-1px);
+}
+
+.login-btn,
+.primary-btn,
+.secondary-btn {
+    border: 0;
+    border-radius: 999px;
+    padding: 0.8rem 1.1rem;
+    cursor: pointer;
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.login-btn,
+.primary-btn {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+    box-shadow: 0 10px 22px rgba(22, 138, 173, 0.2);
+}
+
+.secondary-btn {
+    color: var(--text);
+    background: rgba(18, 50, 73, 0.92);
+    border: 1px solid var(--line);
+}
+
+.login-btn:hover,
+.primary-btn:hover,
+.secondary-btn:hover,
+.text-link:hover {
+    transform: translateY(-2px);
+}
+
+.hero-card,
+.panel {
+    border: 1px solid var(--line);
+    border-radius: 1.6rem;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.hero-card {
+    padding: 1.6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-card::before,
+.panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), transparent 32%);
+}
+
+.panel {
+    position: relative;
+    overflow: hidden;
+    padding: 1.6rem;
+}
+
+.hero-intro h2,
+.panel h2 {
+    font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
+.hero-intro p,
+.panel p,
+.route-list,
+.detail-copy,
+.contact-form label {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.route-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.9rem;
+}
+
+.panel-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.product-card,
+.detail-card,
+.admin-stats article {
+    border-radius: 1.3rem;
+    background: var(--surface-strong);
+    border: 1px solid var(--line);
+}
+
+.product-card {
+    padding: 1.2rem;
+    display: grid;
+    gap: 0.9rem;
+    justify-items: center;
+    text-align: center;
+    min-height: 100%;
+}
+
+.product-media,
+.detail-media {
+    border-radius: 1.1rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line);
+}
+
+.product-media {
+    aspect-ratio: 4 / 3;
+}
+
+.detail-media {
+    min-height: 100%;
+}
+
+.product-image,
+.detail-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-price {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.text-link {
+    color: var(--primary);
+    font-weight: 700;
+    width: fit-content;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: rgba(37, 164, 199, 0.14);
+    transition: transform 180ms ease;
+}
+
+.detail-card {
+    padding: 1.4rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.price-value {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1rem;
+    padding: 1.4rem;
+    border-radius: 1.3rem;
+    background: var(--surface-strong);
+    border: 1px solid var(--line);
+}
+
+.contact-form label {
+    display: grid;
+    gap: 0.45rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    padding: 0.9rem 1rem;
+    background: rgba(10, 37, 56, 0.95);
+    color: var(--text);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #7aa7c2;
+}
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.admin-stats article {
+    padding: 1rem;
+    display: grid;
+    gap: 0.4rem;
+    background: rgba(16, 48, 70, 0.95);
+}
+
+.admin-stats strong {
+    font-size: 1.8rem;
+    font-family: "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+.hero-aside {
+    background: #fffaf5;
+}
+
+.hero-intro {
+    background:
+    radial-gradient(circle at top right, rgba(37, 164, 199, 0.14), transparent 30%),
+    #0f2a40;
+}
+
+.panel-head h2,
+.detail-card strong,
+.admin-stats strong {
+    color: var(--text);
+}
+
+.route-list strong,
+.detail-copy,
+.panel p,
+.contact-form label,
+.admin-stats span {
+    color: var(--muted);
+}
+
+.product-card h3 {
+    color: var(--text);
+}
+
+.product-card p,
+.contact-layout p,
+.detail-layout p,
+.empty-state p {
+    color: var(--muted);
+}
+
+.product-badge {
+    color: var(--primary);
+}
+
+.price-label,
+.section-label {
+    color: var(--primary-strong);
+}
+
+.hero-intro h2,
+.panel h2,
+.panel h3,
+.brand-title {
+    text-wrap: balance;
+}
+
+.hero-intro,
+.hero-aside {
+    background: var(--surface);
+}

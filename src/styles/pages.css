@@ -1,0 +1,62 @@
+.page-shell {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+}
+
+.home-hero,
+.hero-grid,
+.contact-layout,
+.detail-layout {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.home-hero {
+    grid-template-columns: 1fr;
+}
+
+.hero-grid {
+    grid-template-columns: 1.4fr 0.9fr;
+    align-items: stretch;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.detail-layout {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+}
+
+.detail-info {
+    grid-column: 1 / -1;
+}
+
+.detail-media {
+    grid-column: 1;
+}
+
+.detail-card {
+    grid-column: 2;
+}
+
+.contact-layout {
+    grid-template-columns: 0.9fr 1.1fr;
+}
+
+.empty-state {
+    display: grid;
+    gap: 1rem;
+    justify-items: start;
+}
